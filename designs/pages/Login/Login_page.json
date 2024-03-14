@@ -1,0 +1,148 @@
+[
+    {
+        "id": "sd_Ozet11OVBnjOjm8B",
+        "type": "tab",
+        "createdDate": "2024-02-19T12:51:53.874Z",
+        "label": "Login_page",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "Login_pageComponent"
+    },
+    {
+        "id": "sd_QDFF6T8RzRMBg9GD",
+        "type": "OnInit",
+        "z": "sd_Ozet11OVBnjOjm8B",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_QDFF6T8RzRMBg9GD",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_8Vijll1HoU6icyfH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "Login_pageComponent"
+    },
+    {
+        "id": "sd_8Vijll1HoU6icyfH",
+        "type": "PageVariables",
+        "z": "sd_Ozet11OVBnjOjm8B",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_8Vijll1HoU6icyfH",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_ZvSaBBcWVo2ZWEzr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Login_pageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_TxtnvKFmPqUq2akN",
+        "type": "PageStart",
+        "z": "sd_Ozet11OVBnjOjm8B",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "login",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "login",
+        "category": "General",
+        "x": 205,
+        "y": 140,
+        "wires": [
+            [
+                "sd_8piGg3eSnQvSr4ce"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "Login_pageComponent"
+    },
+    {
+        "id": "sd_8piGg3eSnQvSr4ce",
+        "type": "Script",
+        "z": "sd_Ozet11OVBnjOjm8B",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.system.oauthService.login();",
+        "functionName": "sd_8piGg3eSnQvSr4ce",
+        "category": "Function",
+        "x": 365,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Login_pageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ZvSaBBcWVo2ZWEzr",
+        "type": "Script",
+        "z": "sd_Ozet11OVBnjOjm8B",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "if(!page.system.oauthService.isLoggedIn){\n    return\n}",
+        "functionName": "sd_ZvSaBBcWVo2ZWEzr",
+        "category": "Function",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            [
+                "sd_UdaljMuDoJlSUa0Y"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Login_pageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UdaljMuDoJlSUa0Y",
+        "type": "Navigation",
+        "z": "sd_Ozet11OVBnjOjm8B",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": null,
+        "functionName": "sd_UdaljMuDoJlSUa0Y",
+        "category": "Navigation",
+        "x": 445,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Login_pageComponent",
+        "generated": true
+    }
+]
